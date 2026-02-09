@@ -1,0 +1,10 @@
+.DS_Store
+
+# Build artifacts
+dist/
+
+# Secrets and local env
+.env
+
+# Logs
+*.log

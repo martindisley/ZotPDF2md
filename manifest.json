@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "ZotPDF2md",
+  "version": "0.1.0",
+  "description": "Convert PDF/image attachments to Markdown using Mistral OCR",
+  "background": {
+    "scripts": ["bootstrap.js"]
+  },
+  "applications": {
+    "zotero": {
+      "id": "zotpdf2md@zotero.org",
+      "update_url": "https://example.com/updates.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "7.*"
+    }
+  }
+}

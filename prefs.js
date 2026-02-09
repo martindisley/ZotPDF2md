@@ -1,0 +1,15 @@
+pref("extensions.zotpdf2md.mistral.apiKey", "");
+pref("extensions.zotpdf2md.ocr.model", "mistral-ocr-latest");
+pref("extensions.zotpdf2md.ocr.pagesMode", "all");
+pref("extensions.zotpdf2md.ocr.firstN", 2);
+pref("extensions.zotpdf2md.ocr.rangeStart", 0);
+pref("extensions.zotpdf2md.ocr.rangeEnd", 0);
+pref("extensions.zotpdf2md.ocr.list", "");
+pref("extensions.zotpdf2md.ocr.extractImages", false);
+pref("extensions.zotpdf2md.output.exportDir", "");
+pref("extensions.zotpdf2md.output.fileNameTemplate", "{citekey}_{attachmentBasename}.md");
+pref("extensions.zotpdf2md.note.template", "# {itemTitle}\n\n* Zotero item: {itemKey}\n* Attachment: {attachmentFilename}\n* Created: {timestamp}\n* Model: {model}\n* Pages: {pagesHuman}\n\n---\n\n");
+pref("extensions.zotpdf2md.cache.enabled", true);
+pref("extensions.zotpdf2md.cache.maxEntries", 200);
+pref("extensions.zotpdf2md.cache.data", "{\"entries\":{}}");
+pref("extensions.zotpdf2md.debug.enabled", false);

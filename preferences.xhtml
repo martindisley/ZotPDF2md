@@ -1,0 +1,97 @@
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml">
+  <groupbox>
+    <label value="Mistral API"/>
+    <hbox align="center">
+      <label value="API Key"/>
+      <html:input id="zotpdf2md-api-key" type="password"
+                  preference="extensions.zotpdf2md.mistral.apiKey"
+                  style="width: 360px;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="Model"/>
+      <html:input id="zotpdf2md-model" type="text"
+                  preference="extensions.zotpdf2md.ocr.model"
+                  style="width: 240px;"/>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label value="Pages"/>
+    <radiogroup id="zotpdf2md-pages-mode"
+                preference="extensions.zotpdf2md.ocr.pagesMode">
+      <radio label="All" value="all"/>
+      <hbox align="center">
+        <radio label="First N" value="firstN"/>
+        <html:input id="zotpdf2md-firstN" type="number" min="1"
+                    preference="extensions.zotpdf2md.ocr.firstN"
+                    style="width: 60px;"/>
+      </hbox>
+      <hbox align="center">
+        <radio label="Range (inclusive)" value="range"/>
+        <label value="Start"/>
+        <html:input id="zotpdf2md-range-start" type="number" min="0"
+                    preference="extensions.zotpdf2md.ocr.rangeStart"
+                    style="width: 60px;"/>
+        <label value="End"/>
+        <html:input id="zotpdf2md-range-end" type="number" min="0"
+                    preference="extensions.zotpdf2md.ocr.rangeEnd"
+                    style="width: 60px;"/>
+      </hbox>
+      <hbox align="center">
+        <radio label="List" value="list"/>
+        <html:input id="zotpdf2md-list" type="text"
+                    preference="extensions.zotpdf2md.ocr.list"
+                    placeholder="0,1,4-6"
+                    style="width: 200px;"/>
+      </hbox>
+    </radiogroup>
+  </groupbox>
+
+  <groupbox>
+    <label value="Output"/>
+    <hbox align="center">
+      <label value="Export Directory"/>
+      <html:input id="zotpdf2md-export-dir" type="text"
+                  preference="extensions.zotpdf2md.output.exportDir"
+                  style="width: 320px;"/>
+      <button id="zotpdf2md-browse" label="Browse..." oncommand="ZotPDF2mdPrefs.pickExportDir();"/>
+    </hbox>
+    <hbox align="center">
+      <label value="Filename Template"/>
+      <html:input id="zotpdf2md-filename-template" type="text"
+                  preference="extensions.zotpdf2md.output.fileNameTemplate"
+                  style="width: 320px;"/>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label value="OCR Options"/>
+    <hbox align="center">
+      <checkbox id="zotpdf2md-extract-images"
+                label="Extract images (placeholders only)"
+                preference="extensions.zotpdf2md.ocr.extractImages"/>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label value="Cache"/>
+    <hbox align="center">
+      <checkbox id="zotpdf2md-cache-enabled"
+                label="Enable cache"
+                preference="extensions.zotpdf2md.cache.enabled"/>
+    </hbox>
+    <hbox align="center">
+      <label value="Max entries"/>
+      <html:input id="zotpdf2md-cache-max" type="number" min="1"
+                  preference="extensions.zotpdf2md.cache.maxEntries"
+                  style="width: 80px;"/>
+      <button id="zotpdf2md-cache-clear" label="Clear Cache"/>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label value="Privacy"/>
+    <description>Documents are sent to Mistral AI for OCR processing.</description>
+  </groupbox>
+</vbox>
